@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #array_wrap {
+            padding-top: 15px;
+            width: 30%;
+            margin: 0 auto;
+        }
+
+        #button {
+            text-align: center;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="array_wrap">
+        <div id="array"></div>
+        <div id="button">
+            <button style="text" id="sort" onclick="sort();">Sort</button>
+            <button style="text" id="sort" onclick="reverse();">Reverse</button>
+        </div>
+    </div>
+    <script>
+        
+        var fruits = ["banana", "strawberry", "orange", "lemon", "peach", "watermelon", "blackberry"];
+
+        function sort(){
+            var sort = document.getElementById('sort');
+            fruits.sort();
+            document.getElementById('array').innerHTML = fruits;
+        }
+
+        function reverse(){
+            var sort = document.getElementById('sort');
+            fruits.reverse();
+            document.getElementById('array').innerHTML = fruits;
+        }
+
+       
+
+    </script>
+</body>
+</html>

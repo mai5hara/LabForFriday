@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #number_wrap{
+            padding-top: 30px;
+            width: 30%;
+            margin: 0 auto;
+            text-align: center;
+
+        }
+        #calculate_button{
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #result{
+            border:1px solid #333333;
+            width: auto;
+            height: 50px;
+            margin: 30px auto;
+            font-size: 43px;
+            }
+
+
+    </style>
+</head>
+<body>
+    <div id="number_wrap">
+        <div id="input_number">
+            <p>1st Number : <input type="text" id="firstNumber"></p>
+            <p>2nd Number : <input type="text" id="secondNumber"></p>
+        </div>
+        <div id="calculate_button">
+            <button type="button" id="multiply" onclick="clickMultiply();">Multiply</button>
+            <button type="button" id="devide" onclick="clickDevide();">Divide</button>
+        </div>
+        <div id="result"></div>
+    </div>
+
+    <script>
+
+        function clickMultiply() {
+            var oneNumber = document.getElementById('firstNumber').value;
+            var twoNumber = document.getElementById('secondNumber').value;
+            var result = Number(oneNumber * twoNumber);
+            document.getElementById('result').innerHTML = result.toFixed(2);
+        }
+
+        function clickDevide() {
+            var oneNumber = document.getElementById('firstNumber').value;
+            var twoNumber = document.getElementById('secondNumber').value;
+            var result = Number(oneNumber / twoNumber);
+            document.getElementById('result').innerHTML = result.toFixed(2);
+        }
+
+
+
+
+    </script>
+
+</body>
+</html>

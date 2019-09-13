@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #calculator{
+            width: 30%;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 30px;
+            /* padding-left: 50px; */
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+
+        #kilogarams_result, #piunds_result {
+            border: 1px solid #333333;
+            height: 40px;
+            font-size: 23px;
+            width: 150px;
+            margin: 0 auto;
+            line-height: 40px;  
+
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="calculator">
+            <p>Pounds : <input type="text" id="pl" oninput="weightConvertPl(this.value)"></p>
+            <p>Kilograms : <input type="text" id="kl" onchange="weightConvertKg(this.value)"></p>
+
+        <div class="result">
+            <p>Kilogarams</p>
+            <p id="kilogarams_result"></p>
+            <p>Pounds</p>
+            <p id="piunds_result"></p>
+        </div>
+    </div>
+
+    <script>
+        function weightConvertPl(value) {
+            var kgresult = (1 / 2.2) * value
+            document.getElementById("kilogarams_result").innerHTML = kgresult.toFixed(3);
+        }
+
+        function weightConvertKg(value) {
+            var plresult = 2.2 * value
+            document.getElementById("piunds_result").innerHTML = plresult.toFixed(3);
+        }
+
+    </script>
+</body>
+</html>
